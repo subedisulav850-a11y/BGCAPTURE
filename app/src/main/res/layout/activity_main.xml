@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0F17"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- ═══════════ HEADER ═══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#131A26"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚡ BASHANT CAPTURE"
+                android:textColor="#4ADE80"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.1"
+                android:fontFamily="monospace"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INTERNAL APP  •  FULL CREDIT @Bgcodex"
+                android:textColor="#8B98A8"
+                android:textSize="10sp"
+                android:layout_marginTop="2dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="○ IDLE"
+                    android:textColor="#8B98A8"
+                    android:textSize="13sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Packets: 0"
+                    android:textColor="#8B98A8"
+                    android:textSize="11sp"
+                    android:background="#1B2433"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="3dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_keyiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="KEY/IV: not extracted yet"
+                android:textColor="#FB923C"
+                android:textSize="9sp"
+                android:fontFamily="monospace"
+                android:layout_marginTop="6dp"/>
+
+        </LinearLayout>
+
+        <!-- ═══════════ CAPTURE OPTIONS ═══════════ -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="#131A26"
+            app:cardCornerRadius="10dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CAPTURE OPTIONS"
+                    android:textColor="#8B98A8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Capture TCP"
+                        android:textColor="#E6EDF3"
+                        android:textSize="13sp"/>
+
+                    <Switch
+                        android:id="@+id/sw_capture_tcp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:thumbTint="#4ADE80"
+                        android:trackTint="#243044"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Capture UDP"
+                        android:textColor="#E6EDF3"
+                        android:textSize="13sp"/>
+
+                    <Switch
+                        android:id="@+id/sw_capture_udp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:thumbTint="#FB923C"
+                        android:trackTint="#243044"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Overlay Log (shows on game screen)"
+                        android:textColor="#E6EDF3"
+                        android:textSize="13sp"/>
+
+                    <Switch
+                        android:id="@+id/sw_overlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:thumbTint="#22D3EE"
+                        android:trackTint="#243044"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ═══════════ CONTROL BUTTONS ═══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="▶ START VPN"
+                android:textColor="#0B0F17"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:backgroundTint="#4ADE80"/>
+
+            <Button
+                android:id="@+id/btn_stop"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="■ STOP"
+                android:textColor="#0B0F17"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:backgroundTint="#F87171"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btn_launch_ff"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="🎮 FF"
+                android:textColor="#E6EDF3"
+                android:textSize="11sp"
+                android:backgroundTint="#1B2433"
+                android:enabled="false"/>
+
+            <Button
+                android:id="@+id/btn_export"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:text="💾 EXPORT"
+                android:textColor="#E6EDF3"
+                android:textSize="11sp"
+                android:backgroundTint="#1B2433"/>
+
+            <Button
+                android:id="@+id/btn_support"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="✈ @Bgcodex"
+                android:textColor="#22D3EE"
+                android:textSize="10sp"
+                android:backgroundTint="#0A1E25"/>
+
+        </LinearLayout>
+
+        <!-- ═══════════ PACKET LIST ═══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#131A26"
+            android:padding="12dp">
+
+            <!-- Filter + Clear row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PACKETS"
+                    android:textColor="#8B98A8"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+                <ToggleButton
+                    android:id="@+id/chip_tcp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textOn="TCP ✓"
+                    android:textOff="TCP"
+                    android:checked="true"
+                    android:textSize="9sp"
+                    android:textColor="#4ADE80"
+                    android:backgroundTint="#1A2A1A"
+                    android:layout_marginEnd="6dp"/>
+
+                <ToggleButton
+                    android:id="@+id/chip_udp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textOn="UDP ✓"
+                    android:textOff="UDP"
+                    android:checked="true"
+                    android:textSize="9sp"
+                    android:textColor="#FB923C"
+                    android:backgroundTint="#1A1210"
+                    android:layout_marginEnd="6dp"/>
+
+                <Button
+                    android:id="@+id/btn_clear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text="CLR"
+                    android:textSize="9sp"
+                    android:textColor="#8B98A8"
+                    android:backgroundTint="#1B2433"
+                    android:paddingHorizontal="10dp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_packets"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+        <!-- ═══════════ FOOTER ═══════════ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BASHANT CAPTURE INTERNAL APP  •  FULL CREDIT @Bgcodex  •  t.me/Bgcodex"
+            android:textColor="#3D4B5C"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
