@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BashantCapture" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#4ADE80</item>
+        <item name="colorPrimaryVariant">#22D3EE</item>
+        <item name="colorOnPrimary">#0B0F17</item>
+        <item name="colorSurface">#131A26</item>
+        <item name="colorOnSurface">#E6EDF3</item>
+        <item name="android:windowBackground">#0B0F17</item>
+        <item name="android:statusBarColor">#0B0F17</item>
+        <item name="android:navigationBarColor">#0B0F17</item>
+    </style>
+</resources>
