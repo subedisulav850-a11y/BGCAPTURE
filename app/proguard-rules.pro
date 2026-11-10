@@ -1,0 +1,4 @@
+-keep class com.bashant.capture.** { *; }
+-keep class org.bouncycastle.** { *; }
+-dontwarn org.bouncycastle.**
+-dontwarn javax.crypto.**
